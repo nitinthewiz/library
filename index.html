@@ -52,19 +52,15 @@
 
 			<span class="book-title">{{book}}</span>
 			<span class="book-author">{{author}}</span>
-
-			<div class="book-cover">
-				<img src="{{cover}}">
-			</div>
 		
 			<div class="book-box-bottom {{rowNumber}}">
-				
-				{{^checkedout}}
-					<a href="{{url}}" target="_blank">
-						<span class="book-box-borrow btn">Get the book</span>
-					</a>
-				{{/checkedout}}
+				<a href="{{url}}" target="_blank">
+					<span class="book-box-borrow btn">Get the book</span>
+				</a>
+			</div>
 
+						<div class="book-cover">
+				<img src="{{cover}}">
 			</div>
 
 		</div>

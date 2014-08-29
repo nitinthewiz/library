@@ -198,6 +198,8 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
   padding: 10px 0 0; }
   .book-cover img {
     width: 100%; }
+  .book-cover:hover {
+    cursor: pointer; }
 
 .book-box:hover {
   border-color: #c2453e; }

@@ -203,6 +203,10 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
     width: 100%;
   }
 
+  &:hover {
+    cursor: pointer;
+  }
+
 }
 
 .book-box:hover {

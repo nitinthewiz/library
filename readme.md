@@ -1,6 +1,6 @@
 # Berks!
 
-[library bysusanlin](library.png)
+![library bysusanlin](https://raw.githubusercontent.com/bysl/library/gh-pages/library-screenshot.png)
 
 Forked from –
 

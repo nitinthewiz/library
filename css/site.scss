@@ -1,0 +1,297 @@
+
+$black: #222;
+$beige: #f0eadf;
+$red: #c2453e;
+$lavender: #d4cdd4;
+$grey: #ababab;
+
+$fontControls: "Quicksand", sans-serif;
+$fontBody: "Roboto Slab", sans-serif;
+
+@mixin transition($duration, $property: all, $delay:0) {
+  transition: $duration $property;
+  -webkit-transition: $duration $property;
+  -moz-transition: $duration $property;
+  -ms-transition: $duration $property;
+  -o-transition: $duration $property;
+  transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+  -o-transition-delay: $delay;
+}
+
+body {
+  font-family: $fontBody;
+  margin: 0px; 
+  padding: 20px;
+  background: $beige;
+  color: $black;
+  border-top: 5px solid $red;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  color: $red;
+
+  &:hover {
+    color: $black;
+  }
+
+}
+
+small {
+  font-weight: 700; 
+  font-size: 11px; 
+  letter-spacing: .08em;
+}
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $grey;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+h4, h5 {
+  margin: 4px 0px;
+}
+h5 {
+  font-weight: lighter;
+  color: #0087ff;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 870px;
+  margin: 0px auto;
+  overflow: auto;
+  padding: 20px 0px;
+}
+
+*:focus {
+  outline: 0;
+}
+
+.span1 {
+  max-width: 48%;
+  display: inline-block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-right: 18px;
+  vertical-align: top;
+}
+  .span1:last-child {
+    padding-right: 0px;
+  }
+
+#info a img {
+  border: 0;
+  text-decoration: none;
+}
+
+ul.nav {list-style: none; margin: 0px; padding: 0px; color: #0087ff;}
+ul.nav li {display: inline; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; padding-right: 4px;}
+ul.nav a {color: #0087ff; border-bottom: 1px dotted #0087ff;}
+ul.nav a:hover {color: #55b6ff; border-color: #55b6ff;}
+
+#info, header {padding-right: 10px; padding-left: 10px;}
+#info a {color: #55b6ff; border-color: #55b6ff;}
+#info a:hover {color: #55b6ff; border-color: #55b6ff;}
+#info a {color: #333; border-color: #333;}
+#info p {font-weight: lighter; font-size: 12px; line-height: 1.5em;}
+
+input:not([type=submit]):not([type=file]):not([type=checkbox]) {
+  margin: 20px 0;
+  border: none;
+  padding: 0px;
+  font-family: $fontBody;
+  color: $black;
+  font-size: 14px; 
+  height: 22px;
+  box-shadow: inset 2px 2px 0 $lavender;
+  border-radius: 6px;
+  padding: 7px 10px 5px;
+  width: 260px;
+}
+
+
+//Filters
+
+.sml-button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-family: $fontControls;
+  background-color: $red;
+  box-shadow: 0 2px 0 darken($red,10%);
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center; 
+  color: #fff;
+}
+.sml-button:hover {
+  opacity: lighten($red, 15%);
+}
+.button-pressed {
+  background: darken($red,15%);
+  box-shadow: inset 0 2px 0 $beige, 0 2px 0 darken($red,15%);
+  padding-top: 8px;
+}
+
+#showAvailable {
+  float: right;
+  width: 200px;
+}
+
+#books {
+  -webkit-column-count:3;
+  -webkit-column-gap : 16px;
+  -webkit-column-width: 250px;
+  -moz-column-count:3;
+  -moz-column-gap : 16px;
+  -moz-column-width: 250px;
+}
+
+.book-box { 
+  background: #fff; 
+  color: #222; 
+  border-top: 3px solid $lavender;
+  border-radius: 2px;
+  padding: 12px; 
+  margin-bottom: 16px; 
+  box-sizing: border-box;
+  -mox-box-sizing:border-box; 
+  -webkit-column-break-inside:avoid; 
+  -moz-column-break-inside:avoid;
+   display: table; width: 100%;
+   @include transition(0.2s, all);
+ }
+.book-box a {
+  border-color: #9B9A9A;
+}
+.book-box:nth-child(1) {
+  margin-top: 0;
+}
+
+.book-title {
+  display: block;
+  font-size: 26px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 300;
+}
+.book-author {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: $grey;
+}
+
+.book-cover {
+  padding: 25px 0 0;
+
+  img {
+    width: 100%;
+  }
+
+}
+
+.book-box:hover {
+  border-color: $red;
+}
+.book-box ul {list-style: none; margin: 20px 0px 0px 0px; padding: 0px;}
+.book-box li {margin: 10px 0px;}
+
+.book-box-borrow {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    background: none repeat scroll 0% 0% #FFF;
+    border-radius: 4px;
+    color: #C2453E;
+    text-align: center;
+    width: 100%;
+    margin: 12px 0px;
+    cursor: pointer;
+    border: 2px solid;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 7px 0px 9px;
+}
+.book-box-borrow:hover {
+  background: $red;
+  color: white;
+  border: 2px solid $red;
+  @include transition(0.2s, all);
+}
+
+.book-box-borrowed {display: block; box-sizing: border-box; -moz-box-sizing: border-box; position: relative;
+  background-color: #B6B6B6; color: #E0E0DF; padding: 4px 0px; letter-spacing: .08em; font-weight: 900;
+  text-align: center; width: 100%; margin: 12px 0px; border: 1px solid #B6B6B6;}
+
+.book-box-bottom {display: none; width: 100%;}
+
+.selected-book {
+  border-color: $red;
+}
+
+a.imglink {border: none;}
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+*/
+
+.animated {
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px) and (max-width: 1024px) {
+	#books {-webkit-column-count:1;}
+  .span1 {max-width: 100%;}
+}
+
+footer {
+  font-size: 14px;
+  font-weight: 300;
+  border-top: 1px dotted $grey;
+}

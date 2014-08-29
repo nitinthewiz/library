@@ -1,5 +1,7 @@
 # Berks!
 
+[library bysusanlin](library.png)
+
 Forked from –
 
 ### A Tool Lending Library Site

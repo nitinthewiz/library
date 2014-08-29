@@ -113,9 +113,8 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
   color: $black;
   font-size: 14px; 
   height: 22px;
-  box-shadow: inset 2px 2px 0 $lavender;
   border-radius: 6px;
-  padding: 7px 10px 5px;
+  padding: 7px 10px 8px;
   width: 260px;
 }
 
@@ -212,7 +211,7 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
 .book-box ul {list-style: none; margin: 20px 0px 0px 0px; padding: 0px;}
 .book-box li {margin: 10px 0px;}
 
-.book-box-borrow {
+.book-box-borrow { //button
     display: block;
     box-sizing: border-box;
     position: relative;
@@ -228,12 +227,20 @@ input:not([type=submit]):not([type=file]):not([type=checkbox]) {
     font-size: 16px;
     font-weight: 400;
     padding: 7px 0px 9px;
-}
-.book-box-borrow:hover {
-  background: $red;
-  color: white;
-  border: 2px solid $red;
-  @include transition(0.2s, all);
+
+    &:hover {
+      background: $red;
+      color: white;
+      border: 2px solid $red;
+      @include transition(0.2s, all);
+    }
+
+    &:active {
+      position: relative;
+      top: 1px;
+      border: 2px solid $red;
+    }
+
 }
 
 .book-box-borrowed {display: block; box-sizing: border-box; -moz-box-sizing: border-box; position: relative;
@@ -281,6 +288,7 @@ animation-fill-mode: both;
 }
 
 .flash {
+  color: $red;
   -webkit-animation-name: flash;
   animation-name: flash;
 }
